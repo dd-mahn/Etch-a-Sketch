@@ -39,7 +39,8 @@ randomColorBtn.addEventListener("click", () => {
   selectedColor = getRandomColor()
 })
 colorPicker.addEventListener("change", () => {
-  selectedColor = colorPicker.textContent
+  selectedColor = colorPicker.value;
+  colorPicker.style.backgroundColor = colorPicker.value
 })
 function changeColor(e) {
   if(e.type === 'mouseover' && !mouseDown)return
