@@ -24,6 +24,7 @@ createGrid(defaultSize);
 const sizeBtns = document.querySelectorAll("#size-btn")
 sizeBtns.forEach(sizeBtn => sizeBtn.addEventListener("click", () => {
   selectedSize = parseInt(sizeBtn.textContent)
+  refresh()
   changeSize()
 }))
 function changeSize() {
@@ -66,9 +67,9 @@ function changeColor(e) {
 // Create refresh button
 const refreshBtn = document.getElementById("erase-btn")
 refreshBtn.addEventListener("click", refresh)
-function refresh(){
-  const gridItems = document.querySelectorAll(".grid-item")
-  gridItems.forEach(() => {
-    gridItems.style.backgroundColor = "aliceblue"
+function refresh() {
+  let gridItems = document.querySelectorAll(".grid-item")
+  gridItems.forEach((gridItem) => {
+    gridItem.style.backgroundColor = "aliceblue"
   })
 }
