@@ -555,11 +555,11 @@
 }
 
 
-/* @keyframes animStar {
+@keyframes animStar {
     from {
         transform: translateY(0px);
     }
     to {
         transform: translateY(-1375px);
     }
-} */
+}
