@@ -1,4 +1,8 @@
-//Create grid
+//Create grid and make it drawable
+let mouseDown = false;
+document.body.onmousedown = () => {mouseDown = true}
+document.body.onmouseup = () => {mouseDown = false}
+
 const grid = document.getElementById("grid")
 function createGrid(size){
   grid.style.gridTemplateRows = `repeat(${size}, 1fr)`
@@ -10,12 +14,21 @@ function createGrid(size){
     grid.appendChild(gridItem).className = "grid-item";
   }
 }
-createGrid(16);
 
-//Make grid drawable
-let mouseDown = false;
-document.body.onmousedown = () => {mouseDown = true}
-document.body.onmouseup = () => {mouseDown = false}
+const defaultSize = 16;
+let selectedSize = defaultSize
+createGrid(defaultSize);
+
+
+//Make size change function
+const sizeBtns = document.querySelectorAll("#size-btn")
+sizeBtns.forEach(sizeBtn => sizeBtn.addEventListener("click", () => {
+  selectedSize = parseInt(sizeBtn.textContent)
+  changeSize()
+}))
+function changeSize() {
+  createGrid(selectedSize)
+}
 
 
 //Make color change function
@@ -34,9 +47,11 @@ function getRandomColor() {
   //Change color
 defaultColorBtn.addEventListener("click", () => {
   selectedColor = defaultColor
+  colorPicker.style.backgroundColor = defaultColor
 })
 randomColorBtn.addEventListener("click", () => {
   selectedColor = getRandomColor()
+  colorPicker.style.backgroundColor = selectedColor
 })
 colorPicker.addEventListener("change", () => {
   selectedColor = colorPicker.value;
@@ -45,4 +60,15 @@ colorPicker.addEventListener("change", () => {
 function changeColor(e) {
   if(e.type === 'mouseover' && !mouseDown)return
   e.target.style.backgroundColor = selectedColor
+}
+
+
+// Create refresh button
+const refreshBtn = document.getElementById("erase-btn")
+refreshBtn.addEventListener("click", refresh)
+function refresh(){
+  const gridItems = document.querySelectorAll(".grid-item")
+  gridItems.forEach(() => {
+    gridItems.style.backgroundColor = "aliceblue"
+  })
 }
