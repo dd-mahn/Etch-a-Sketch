@@ -43,15 +43,15 @@ body{
 }
 .control{
     margin: 64px;
-    padding: 100px 50px;
+    padding: 100px 60px;
     border: 2px solid aliceblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .btn{
-    padding: 48px 48px;
-    margin: 0px 32px 0px 0px ;
+    padding: 48px 56px;
+    margin: 0px 24px 0px 0px ;
     border-radius: 25px;
     border: 2px solid aliceblue;
     background: none;
