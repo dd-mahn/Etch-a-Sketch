@@ -43,20 +43,20 @@ body{
 }
 .control{
     margin: 64px;
-    padding: 100px;
+    padding: 100px 50px;
     border: 2px solid aliceblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .btn{
-    padding: 48px 64px;
+    padding: 48px 48px;
     margin: 0px 32px 0px 0px ;
     border-radius: 25px;
     border: 2px solid aliceblue;
     background: none;
     color: aliceblue;
-    font-size: 24px;
+    font-size: 20px;
 }
 .btn:hover{
     background: aliceblue;
