@@ -48,18 +48,14 @@ body{
     padding: 100px 60px;
     border: 2px solid aliceblue;
     display: flex;
-    flex-wrap: wrap;
     gap: 24px;
-    justify-content: space-between;
     align-items: center;
 }
 .btn{
-    width: 200px;
+    flex: 1;
     padding: 48px 56px;
     border-radius: 25px;
     border: 2px solid aliceblue;
-    background: none;
-    color: aliceblue;
     font-size: 20px;
 }
 .btn:hover{
