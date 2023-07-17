@@ -45,7 +45,7 @@ body{
     background: #110f19;
     border-radius: 25px;
     margin: 64px;
-    padding: 100px 0px;
+    padding: 100px 60px;
     border: 2px solid aliceblue;
     display: flex;
     gap: 24px;
@@ -55,6 +55,8 @@ body{
     flex: 1;
     padding: 48px 56px;
     border-radius: 25px;
+    background: transparent;
+    color: aliceblue;
     border: 2px solid aliceblue;
     font-size: 20px;
 }
