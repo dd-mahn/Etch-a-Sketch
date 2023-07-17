@@ -42,16 +42,20 @@ body{
     background: -webkit-linear-gradient(white, #38495a, #090a0f);
 }
 .control{
+    background: #110f19;
+    border-radius: 25px;
     margin: 64px;
     padding: 100px 60px;
     border: 2px solid aliceblue;
     display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
     justify-content: space-between;
     align-items: center;
 }
 .btn{
+    width: 200px;
     padding: 48px 56px;
-    margin: 0px 24px 0px 0px ;
     border-radius: 25px;
     border: 2px solid aliceblue;
     background: none;
