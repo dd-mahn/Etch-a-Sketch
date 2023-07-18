@@ -53,7 +53,7 @@ body{
 }
 .btn{
     flex: 1;
-    padding: 48px 56px;
+    padding: 48px 0px;
     border-radius: 25px;
     background: transparent;
     color: aliceblue;
